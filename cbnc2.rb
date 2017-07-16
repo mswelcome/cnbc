@@ -26,7 +26,7 @@ end
  			off << i 
  		end
   	end 	
- 	p off	
+ 	off	
 end
 
 # def off_one_array(wn, yt)
