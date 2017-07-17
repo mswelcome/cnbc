@@ -40,4 +40,16 @@ class Test_cbnc < Minitest::Test
 		wn = ["1235", "2234", "1934", "1334"]
 		assert_equal(["1235", "2234", "1934", "1334"], cbnc_off_one_array(wn, yn))
 	end
+
+	 def test_cbnc_off_one_extended
+	 	yn = "12345678"
+	 	wn = "12355678"
+	 	assert_equal(true, cbnc_off_one(yn, wn))
+	 end
+
+	 def test_cbnc_off_one_array_extended
+	 	yn = "12345678"
+	 	wn = ["12355678", "99999999", "88888888", "777777777"]
+	 	assert_equal(["12355678"], cbnc_off_one_array(wn, yn))
+	 end
 end

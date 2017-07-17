@@ -11,24 +11,18 @@ def cbnc(wn, yn)
 end
 
 def cbnc_off_one(yn, wn)
-	x = 0
-	if yn[0] == wn[0]
-		x += 1
+	c = 0
+	i = 0
+
+	yn.length.times do
+		if yn[i] == wn[i]
+			c += 1
+		end
+		i += 1
 	end
 
-	if yn[1] == wn[1]
-		x += 1
-	end
-
-	if yn[2] == wn[2]
-		x += 1
-	end
-
-	if yn[3] == wn[3]
-		x += 1
-	end
-
-	x == 3
+	
+	c == yn.length - 1
 
 end
 

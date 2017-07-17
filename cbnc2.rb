@@ -15,12 +15,13 @@ def cbnc2_win
 end		
 	
 def cbnc2_split
-	'6666'.chars
+	'6666'.split(//)
 end
 
  def cbnc2_off_one(wn, yt)
  	off = []
  	wn.each do |i| 
+ 		#p "This is i #{i}"
  		yt.split(//).zip(i.split(//))
  		if i[0] != i[1]
  			off << i 
@@ -28,16 +29,3 @@ end
   	end 	
  	off	
 end
-
-# def off_one_array(wn, yt)
-# 	off = []
-# 	p "Winning Numbers are #{wn}"
-# 	p "Your Ticket is #{yt}"
-# 	wn.each do |i|
-# 		if true == cbnc2_off_one(yt, i)
-# 			off << i
-# 		end
-# 	end
-# 	off
-# end
-
