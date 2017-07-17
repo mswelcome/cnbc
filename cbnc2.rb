@@ -20,12 +20,31 @@ end
 
  def cbnc2_off_one(wn, yt)
  	off = []
+ 	#c = 0 
+ 	
  	wn.each do |i| 
- 		#p "This is i #{i}"
- 		yt.split(//).zip(i.split(//))
- 		if i[0] != i[1]
- 			off << i 
+ 		c = 0
+ 		x = 0
+ 		#p "#{i[x]} Iteration possition"
+ 		#p "#{yt[x]} Your Ticket"
+ 		#p "#{x} index "
+ 		yt.length.times do
+ 			p "#{i[x]} Iteration possition"
+ 			p "#{yt[x]} Your Ticket"
+ 			if yt[x] == i[x]
+ 			p "#{i} Winning Number Iteration"
+ 			c += 1
+ 			p "#{c} counter"
+ 			end
+ 			x += 1
+		end
+		
+ 		if c == yt.length - 1
+ 			off << i
  		end
-  	end 	
+ 			
+  	end
+  	
+
  	off	
 end

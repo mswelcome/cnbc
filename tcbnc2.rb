@@ -18,30 +18,30 @@ class Test_cbnc2 < Minitest::Test
 
 	def test_cbnc2_off_one
 		yt = "1234"
-		wn = ["1235", "9999", "8888", "7777"]
+		wn = ["1235" , "9999" , "8888", "7777"]
 		p cbnc2_off_one(wn, yt)
 		assert_equal(["1235"], cbnc2_off_one(wn, yt))
 	end
 
-	def test_cbnc2_off_one_2
-		yt = "1234"
-		wn = ["1235", "1634", "8888", "7777"]
-		p cbnc2_off_one(wn, yt)
-		assert_equal(["1235","1634"], cbnc2_off_one(wn,yt))
-	end
+	 def test_cbnc2_off_one_2
+	 	yt = "1234"
+	 	wn = ["1235", "1634", "8888", "7777"]
+	 	p cbnc2_off_one(wn, yt)
+	 	assert_equal(["1235","1634"], cbnc2_off_one(wn,yt))
+	 end
 
-	def test_cbnc2_off_one_ln
-		yt = "12345678"
-		wn = ["12355678", "88888888", "99999999", "77777777"]
-		p cbnc2_off_one(wn, yt)
-		assert_equal(["12355678"], cbnc2_off_one(wn, yt))
-	end
-
-	def test_cbnc2_off_one_ln_2
-		yt = "12345678"
-		wn = ["12355678", "12445678", "99999999", "77777777"]
-		p cbnc2_off_one(wn, yt)
-		assert_equal(["12355678", "12445678"], cbnc2_off_one(wn, yt))
-	end
+	 def test_cbnc2_off_one_ln
+	 	yt = "12345678"
+	 	wn = ["12355678", "88888888", "99999999", "77777777"]
+	 	p cbnc2_off_one(wn, yt)
+	 	assert_equal(["12355678"], cbnc2_off_one(wn, yt))
+	 end
+	
+	 def test_cbnc2_off_one_ln_2
+	 	yt = "12345678"
+	 	wn = ["12355678", "12445678", "99999999", "77777777"]
+	 	p cbnc2_off_one(wn, yt)
+	 	assert_equal(["12355678", "12445678"], cbnc2_off_one(wn, yt))
+	 end
 
 end
